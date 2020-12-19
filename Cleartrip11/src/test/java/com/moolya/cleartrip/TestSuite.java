@@ -21,11 +21,14 @@ import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 public class TestSuite {
+	
 	public String baseUrl = "https://www.cleartrip.com/";
 	public WebDriver driver;
-	
+	private SoftAssert sa;
+	private SoftAssert sa1;
 	
 	@BeforeTest
 	public void setBaseURL() {
@@ -38,17 +41,19 @@ public class TestSuite {
 	}
 
 	@Test(priority = 1)
-	public void SelectFight() {
+	public void selectFight() {
 		driver.findElement( By.xpath("//a[@title='Find flights from and to international destinations around the world']")).click();
 	}
 
 	@Test(priority = 2)
-	public void SelectOneWay() {
-		driver.findElement(By.id("OneWay")).click();
+	public void selectOneWay() {
+		WebElement oneWay= driver.findElement(By.id("OneWay"));
+		oneWay.click();
+		Assert.assertTrue(oneWay.isSelected(),"OneWay Unchecked");
 	}
 
 	@Test(priority = 3)
-	public void SelectCities() {
+	public void selectCities() {
 		WebElement fromcity = driver.findElement(By.xpath("//input[@id='FromTag']"));
 		Assert.assertTrue(fromcity.isDisplayed());
 		fromcity.sendKeys("Bangalore");
@@ -61,7 +66,7 @@ public class TestSuite {
 	}
 
 	@Test(priority = 4)
-	public void SelectDate() {
+	public void selectDate() {
 		DateFormat dateformat = new SimpleDateFormat("DD/MM/YYYY");
 		Calendar cal = Calendar.getInstance();
 		cal.add(Calendar.DATE, 30);
@@ -73,7 +78,7 @@ public class TestSuite {
 	}
 
 	@Test(priority = 5)
-	public void SelectPassengers() {
+	public void selectPassengers() {
 		Select adults = new Select(driver.findElement(By.id("Adults")));
 		adults.selectByValue("1");
 
@@ -85,17 +90,20 @@ public class TestSuite {
 	}
 
 	@Test(priority = 6)
-	public void SearchFlights() {
-		driver.findElement(By.id("SearchBtn")).click();
+	public void searchFlights() {
+		sa = new SoftAssert();
+		WebElement search =driver.findElement(By.id("SearchBtn"));
+		sa.assertTrue(search.isDisplayed(),"search not displayed");
+		search.click();
 	}
 	
 	@Test(priority = 7)
-	public void NonStop() {
+	public void nonStop() {
 		driver.findElement(By.xpath("//div[.='Non-stop']")).click();
 	}
 
 	@Test(priority = 8)
-	public void Price() throws InterruptedException {	
+	public void priceRange() throws InterruptedException {	
 		WebElement slider = driver.findElement(By.xpath("(//div[@class='input-range'])[1]"));
 		Actions a = new Actions(driver);
 		a.click();
@@ -117,15 +125,15 @@ public class TestSuite {
 	}
 
 	@Test(priority = 10)
-	public void Book() {
-		driver.findElement(By.xpath("(//div/button[.='Book'])[1]")).click();
+	public void book() {
+		sa1 = new SoftAssert();
+		WebElement book= driver.findElement(By.xpath("(//div/button[.='Book'])[1]"));
+		sa1.assertTrue(book.isDisplayed(),"Book button not displayed");
+		book.click();
 	}
 	 
 	@Test(priority = 11)
-	public void ContactDetails() throws Exception {   
-		String title =driver.getTitle();
-		System.out.println("main window"+title);
-		String your_title = "Cleartrip | Bangalore ? New Delhi";
+	public void contactDetails() throws Exception {   
 		Set<String> windowsIds = driver.getWindowHandles();
 		Iterator<String> iter = windowsIds.iterator();
 			
@@ -134,24 +142,24 @@ public class TestSuite {
 			
 		driver.switchTo().window(childWindow);
 		WebDriverWait wait = new WebDriverWait(driver, 20);
-		String childt=driver.getTitle();
-		System.out.println("child****"+ childt);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollBy(0,2500)", "");
 		driver.findElement(By.xpath("//dd/input[@class='booking']")).click(); 
-		
-	   }
+		}
+	
 	@Test(priority = 12)
 	public void details() {
-	driver.findElement(By.xpath("//input[@etitle=\"Your email address\"]")).sendKeys("shubhamhiremath1996@gmail.com");
-	driver.findElement(By.xpath("//input[@class='booking hotelButton']")).click();
+		driver.findElement(By.xpath("//input[@etitle=\"Your email address\"]")).sendKeys("shubhamhiremath1996@gmail.com");
+		driver.findElement(By.xpath("//input[@class='booking hotelButton']")).click();
 	}
 	
 	@Test(priority = 13)
 	public void travellerDetails() {
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//input[@idfield=\"adultId1\"])[1]")));
+		
 		Select title1 = new Select(driver.findElement(By.xpath("(//select[@id='AdultTitle1'])[1]")));
+		
 		title1.selectByVisibleText("Mr");
 		driver.findElement(By.xpath("(//input[@id='AdultFname1'])[1]")).sendKeys("shubham");
 		driver.findElement(By.xpath("(//input[@id='AdultLname1' and @selflabel=\"Last Name / Surname\"])[1]")).sendKeys("Hiremath");
@@ -188,7 +196,10 @@ public class TestSuite {
 	
 	@AfterTest
 	public void closeBrowser() {
+		sa.assertAll();
+		sa1.assertAll();
 		driver.quit();
+		
 	}
 }
 

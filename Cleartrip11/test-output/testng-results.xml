@@ -2,67 +2,71 @@
 <testng-results skipped="0" failed="0" ignored="0" total="13" passed="13">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="52556" started-at="2020-12-18T15:51:39Z" finished-at="2020-12-18T15:52:31Z">
+  <suite name="Default suite" duration-ms="48981" started-at="2020-12-19T17:36:24Z" finished-at="2020-12-19T17:37:13Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="52556" started-at="2020-12-18T15:51:39Z" finished-at="2020-12-18T15:52:31Z">
+    <test name="Default test" duration-ms="48981" started-at="2020-12-19T17:36:24Z" finished-at="2020-12-19T17:37:13Z">
       <class name="com.moolya.cleartrip.TestSuite">
-        <test-method status="PASS" signature="setBaseURL()[pri:0, instance:com.moolya.cleartrip.TestSuite@47c62251]" name="setBaseURL" is-config="true" duration-ms="14810" started-at="2020-12-18T15:51:39Z" finished-at="2020-12-18T15:51:53Z">
+        <test-method status="PASS" signature="setBaseURL()[pri:0, instance:com.moolya.cleartrip.TestSuite@3e6fa38a]" name="setBaseURL" is-config="true" duration-ms="13398" started-at="2020-12-19T17:36:24Z" finished-at="2020-12-19T17:36:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setBaseURL -->
-        <test-method status="PASS" signature="SelectFight()[pri:1, instance:com.moolya.cleartrip.TestSuite@47c62251]" name="SelectFight" duration-ms="4795" started-at="2020-12-18T15:51:54Z" finished-at="2020-12-18T15:51:58Z">
+        <test-method status="PASS" signature="selectFight()[pri:1, instance:com.moolya.cleartrip.TestSuite@3e6fa38a]" name="selectFight" duration-ms="3127" started-at="2020-12-19T17:36:37Z" finished-at="2020-12-19T17:36:40Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- SelectFight -->
-        <test-method status="PASS" signature="SelectOneWay()[pri:2, instance:com.moolya.cleartrip.TestSuite@47c62251]" name="SelectOneWay" duration-ms="141" started-at="2020-12-18T15:51:58Z" finished-at="2020-12-18T15:51:58Z">
+        </test-method> <!-- selectFight -->
+        <test-method status="PASS" signature="selectOneWay()[pri:2, instance:com.moolya.cleartrip.TestSuite@3e6fa38a]" name="selectOneWay" duration-ms="150" started-at="2020-12-19T17:36:40Z" finished-at="2020-12-19T17:36:41Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- SelectOneWay -->
-        <test-method status="PASS" signature="SelectCities()[pri:3, instance:com.moolya.cleartrip.TestSuite@47c62251]" name="SelectCities" duration-ms="470" started-at="2020-12-18T15:51:58Z" finished-at="2020-12-18T15:51:59Z">
+        </test-method> <!-- selectOneWay -->
+        <test-method status="PASS" signature="selectCities()[pri:3, instance:com.moolya.cleartrip.TestSuite@3e6fa38a]" name="selectCities" duration-ms="411" started-at="2020-12-19T17:36:41Z" finished-at="2020-12-19T17:36:41Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- SelectCities -->
-        <test-method status="PASS" signature="SelectDate()[pri:4, instance:com.moolya.cleartrip.TestSuite@47c62251]" name="SelectDate" duration-ms="153" started-at="2020-12-18T15:51:59Z" finished-at="2020-12-18T15:51:59Z">
+        </test-method> <!-- selectCities -->
+        <test-method status="PASS" signature="selectDate()[pri:4, instance:com.moolya.cleartrip.TestSuite@3e6fa38a]" name="selectDate" duration-ms="156" started-at="2020-12-19T17:36:41Z" finished-at="2020-12-19T17:36:41Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- SelectDate -->
-        <test-method status="PASS" signature="SelectPassengers()[pri:5, instance:com.moolya.cleartrip.TestSuite@47c62251]" name="SelectPassengers" duration-ms="251" started-at="2020-12-18T15:51:59Z" finished-at="2020-12-18T15:51:59Z">
+        </test-method> <!-- selectDate -->
+        <test-method status="PASS" signature="selectPassengers()[pri:5, instance:com.moolya.cleartrip.TestSuite@3e6fa38a]" name="selectPassengers" duration-ms="291" started-at="2020-12-19T17:36:41Z" finished-at="2020-12-19T17:36:41Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- SelectPassengers -->
-        <test-method status="PASS" signature="SearchFlights()[pri:6, instance:com.moolya.cleartrip.TestSuite@47c62251]" name="SearchFlights" duration-ms="80" started-at="2020-12-18T15:51:59Z" finished-at="2020-12-18T15:51:59Z">
+        </test-method> <!-- selectPassengers -->
+        <test-method status="PASS" signature="searchFlights()[pri:6, instance:com.moolya.cleartrip.TestSuite@3e6fa38a]" name="searchFlights" duration-ms="110" started-at="2020-12-19T17:36:41Z" finished-at="2020-12-19T17:36:42Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- SearchFlights -->
-        <test-method status="PASS" signature="NonStop()[pri:7, instance:com.moolya.cleartrip.TestSuite@47c62251]" name="NonStop" duration-ms="13859" started-at="2020-12-18T15:51:59Z" finished-at="2020-12-18T15:52:13Z">
+        </test-method> <!-- searchFlights -->
+        <test-method status="PASS" signature="nonStop()[pri:7, instance:com.moolya.cleartrip.TestSuite@3e6fa38a]" name="nonStop" duration-ms="11038" started-at="2020-12-19T17:36:42Z" finished-at="2020-12-19T17:36:53Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- NonStop -->
-        <test-method status="PASS" signature="Price()[pri:8, instance:com.moolya.cleartrip.TestSuite@47c62251]" name="Price" duration-ms="497" started-at="2020-12-18T15:52:13Z" finished-at="2020-12-18T15:52:14Z">
+        </test-method> <!-- nonStop -->
+        <test-method status="PASS" signature="priceRange()[pri:8, instance:com.moolya.cleartrip.TestSuite@3e6fa38a]" name="priceRange" duration-ms="491" started-at="2020-12-19T17:36:53Z" finished-at="2020-12-19T17:36:53Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Price -->
-        <test-method status="PASS" signature="uncheckBox()[pri:9, instance:com.moolya.cleartrip.TestSuite@47c62251]" name="uncheckBox" duration-ms="161" started-at="2020-12-18T15:52:14Z" finished-at="2020-12-18T15:52:14Z">
+        </test-method> <!-- priceRange -->
+        <test-method status="PASS" signature="uncheckBox()[pri:9, instance:com.moolya.cleartrip.TestSuite@3e6fa38a]" name="uncheckBox" duration-ms="203" started-at="2020-12-19T17:36:53Z" finished-at="2020-12-19T17:36:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- uncheckBox -->
-        <test-method status="PASS" signature="Book()[pri:10, instance:com.moolya.cleartrip.TestSuite@47c62251]" name="Book" duration-ms="241" started-at="2020-12-18T15:52:14Z" finished-at="2020-12-18T15:52:14Z">
+        <test-method status="PASS" signature="book()[pri:10, instance:com.moolya.cleartrip.TestSuite@3e6fa38a]" name="book" duration-ms="222" started-at="2020-12-19T17:36:53Z" finished-at="2020-12-19T17:36:53Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Book -->
-        <test-method status="PASS" signature="ContactDetails()[pri:11, instance:com.moolya.cleartrip.TestSuite@47c62251]" name="ContactDetails" duration-ms="9955" started-at="2020-12-18T15:52:14Z" finished-at="2020-12-18T15:52:24Z">
+        </test-method> <!-- book -->
+        <test-method status="PASS" signature="contactDetails()[pri:11, instance:com.moolya.cleartrip.TestSuite@3e6fa38a]" name="contactDetails" duration-ms="11183" started-at="2020-12-19T17:36:53Z" finished-at="2020-12-19T17:37:05Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ContactDetails -->
-        <test-method status="PASS" signature="details()[pri:12, instance:com.moolya.cleartrip.TestSuite@47c62251]" name="details" duration-ms="1198" started-at="2020-12-18T15:52:24Z" finished-at="2020-12-18T15:52:25Z">
+        </test-method> <!-- contactDetails -->
+        <test-method status="PASS" signature="details()[pri:12, instance:com.moolya.cleartrip.TestSuite@3e6fa38a]" name="details" duration-ms="984" started-at="2020-12-19T17:37:05Z" finished-at="2020-12-19T17:37:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- details -->
-        <test-method status="PASS" signature="travellerDetails()[pri:13, instance:com.moolya.cleartrip.TestSuite@47c62251]" name="travellerDetails" duration-ms="5893" started-at="2020-12-18T15:52:25Z" finished-at="2020-12-18T15:52:31Z">
+        <test-method status="PASS" signature="travellerDetails()[pri:13, instance:com.moolya.cleartrip.TestSuite@3e6fa38a]" name="travellerDetails" duration-ms="6382" started-at="2020-12-19T17:37:06Z" finished-at="2020-12-19T17:37:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- travellerDetails -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.moolya.cleartrip.TestSuite@3e6fa38a]" name="closeBrowser" is-config="true" duration-ms="781" started-at="2020-12-19T17:37:12Z" finished-at="2020-12-19T17:37:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
       </class> <!-- com.moolya.cleartrip.TestSuite -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

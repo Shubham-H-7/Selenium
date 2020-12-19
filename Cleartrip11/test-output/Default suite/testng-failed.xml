@@ -5,10 +5,9 @@
     <classes>
       <class name="com.moolya.cleartrip.TestSuite">
         <methods>
+          <include name="closeBrowser"/>
           <include name="setBaseURL"/>
-          <include name="ContactDetails"/>
-          <include name="travellerDetails"/>
-          <include name="details"/>
+          <include name="uncheckBox"/>
         </methods>
       </class> <!-- com.moolya.cleartrip.TestSuite -->
     </classes>

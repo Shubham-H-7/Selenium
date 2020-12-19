@@ -70,8 +70,7 @@ public class TestSuite {
 		DateFormat dateformat = new SimpleDateFormat("DD/MM/YYYY");
 		Calendar cal = Calendar.getInstance();
 		cal.add(Calendar.DATE, 30);
-		String res = dateformat.format(cal.getTime());
-		System.out.println("Recent date i got**"+res); 
+		String res = dateformat.format(cal.getTime()); 
 		
 		WebElement date =driver.findElement(By.id("DepartDate"));
 		date.sendKeys(res);

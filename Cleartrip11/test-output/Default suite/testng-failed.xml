@@ -7,7 +7,7 @@
         <methods>
           <include name="closeBrowser"/>
           <include name="setBaseURL"/>
-          <include name="uncheckBox"/>
+          <include name="travellerDetails"/>
         </methods>
       </class> <!-- com.moolya.cleartrip.TestSuite -->
     </classes>
